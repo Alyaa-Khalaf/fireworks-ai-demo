@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fireworks AI Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="app">
+
+    <!-- Header -->
+    <div id="header">
+      <span id="header-title">Fireworks AI Demo</span>
+      <div class="mode-tabs">
+        <button class="tab active" id="tab-text" onclick="setMode('text')">Text Chat</button>
+        <button class="tab" id="tab-image" onclick="setMode('image')">Image Gen</button>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+
+      <!-- Chat Area -->
+      <div id="chat-area">
+        <div id="messages">
+          <div class="msg ai">
+            <div class="msg-label">AI</div>
+            <span>Hello! Switch between Text Chat and Image Generation above.</span>
+          </div>
+        </div>
+        <div id="mode-hint">Mode: Text chat — ask me anything</div>
+        <div id="input-area">
+          <textarea id="user-input" placeholder="Type a message..." rows="1"></textarea>
+          <button id="send-btn" onclick="handleSend()">Send</button>
+        </div>
+      </div>
+
+      <!-- History Panel -->
+      <div id="history-panel">
+        <div id="history-title">History</div>
+        <div id="history-list"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
