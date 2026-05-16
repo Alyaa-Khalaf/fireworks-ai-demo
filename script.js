@@ -111,7 +111,7 @@ async function generateImage(prompt) {
       '<div class="msg-label">AI</div><span>Failed to generate image.</span>';
   };
 
-  img.src = `http://localhost:3000/generate-image?prompt=${encodeURIComponent(prompt)}`;
+  img.src = `/generate-image?prompt=${encodeURIComponent(prompt)}`;
 }
 
 async function handleSend() {
